@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 class AuthForm extends StatefulWidget {
+  final void Function(String, String, String, bool, BuildContext) submitFn;
+  final bool _isLoading;
+
+  AuthForm(this.submitFn, this._isLoading);
+
   @override
   _AuthFormState createState() => _AuthFormState();
 }
@@ -19,9 +24,13 @@ class _AuthFormState extends State<AuthForm> {
 
     if (isValid) {
       _formKey.currentState.save();
-      print(_userEmail);
-      print(_userName);
-      print(_userPassword);
+      widget.submitFn(
+        _userEmail.trim(),
+        _userPassword,
+        _userName,
+        _isLogin,
+        context,
+      );
     }
   }
 
@@ -85,21 +94,24 @@ class _AuthFormState extends State<AuthForm> {
                   SizedBox(
                     height: 12,
                   ),
-                  RaisedButton(
-                    child: Text(_isLogin ? 'Login' : 'Sign Up'),
-                    onPressed: _trySubmit,
-                  ),
-                  FlatButton(
-                    textColor: Theme.of(context).primaryColor,
-                    child: Text(_isLogin
-                        ? 'Create new account'
-                        : 'Already have an account'),
-                    onPressed: () {
-                      setState(() {
-                        _isLogin = !_isLogin;
-                      });
-                    },
-                  )
+                  if (widget._isLoading) CircularProgressIndicator(),
+                  if (!widget._isLoading)
+                    RaisedButton(
+                      child: Text(_isLogin ? 'Login' : 'Sign Up'),
+                      onPressed: _trySubmit,
+                    ),
+                  if (!widget._isLoading)
+                    FlatButton(
+                      textColor: Theme.of(context).primaryColor,
+                      child: Text(_isLogin
+                          ? 'Create new account'
+                          : 'Already have an account'),
+                      onPressed: () {
+                        setState(() {
+                          _isLogin = !_isLogin;
+                        });
+                      },
+                    )
                 ],
               ),
             ),
