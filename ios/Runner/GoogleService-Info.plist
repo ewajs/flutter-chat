@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>218573611020-01vjvf4a54022o2eddui032br6v07pe7.apps.googleusercontent.com</string>
+	<string>218573611020-6lvbn52aeatjh8odbtuh04g4rpelu835.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.218573611020-01vjvf4a54022o2eddui032br6v07pe7</string>
+	<string>com.googleusercontent.apps.218573611020-6lvbn52aeatjh8odbtuh04g4rpelu835</string>
 	<key>API_KEY</key>
 	<string>AIzaSyD28yVija7zEtn2-fJt1mzXGon64ZWJBtU</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,22 +13,22 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.chat</string>
+	<string>com.ezequielwajs.chat</string>
 	<key>PROJECT_ID</key>
 	<string>flutter-chat-c93fc</string>
 	<key>STORAGE_BUCKET</key>
 	<string>flutter-chat-c93fc.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:218573611020:ios:e1a2dbac70bdaf446c0e29</string>
+	<string>1:218573611020:ios:36832bdff22f7a056c0e29</string>
 </dict>
 </plist>
